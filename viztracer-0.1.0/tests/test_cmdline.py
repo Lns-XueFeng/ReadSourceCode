@@ -10,7 +10,10 @@ def fib(n):
     return fib(n-1) + fib(n-2)
 fib(5)
 """
+
+
 class TestCommandLineBasic(unittest.TestCase):
+
     def build_script(self):
         with open("cmdline_test.py", "w") as f:
             f.write(file_content)
