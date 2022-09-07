@@ -15,13 +15,18 @@ def string_to_color(s):
 
 
 def snap_tree_node_html(node, parent_entry, parent_exit):
-    parent_duration = parent_exit - parent_entry
+    parent_duration = parent_exit - parent_entry   # 计算出每个call -> return所耗费的时间
+    # 计算出前端展示这个方块的大小
     left = (node.t_entry - parent_entry) / parent_duration
     width = (node.t_exit - node.t_entry) / parent_duration
+    # 前端该方块html代码
     ret = '<div style="left:{}%;width:{}%;" class="func-container">'.\
         format(left*100, width*100)
+    # 根据其func_name计算哈希值设置其function_name的颜色
     ret += '<div style="background-color:{};" class="func-block">{}</div>'.\
         format(string_to_color(node.function_name), html.escape(node.function_name))
+
+    # 为其儿子节点们生成相关html代码
     for child in node.children:
         ret += child.html(node.t_entry, node.t_exit)
     ret += '</div>'
@@ -42,16 +47,18 @@ def generate_html_report_from_snap_tree(tree):
     ret = "<html>"
     ret += "<head>"
     ret += "<script>"
+    # script标签中引用js文件
     with open(os.path.join(os.path.dirname(__file__), "html/control.js")) as f:
         ret += f.read()
     ret += "</script>"
     ret += "<style>"
+    # style标签中引用css文件
     with open(os.path.join(os.path.dirname(__file__), "html/style.css")) as f:
         ret += f.read()
     ret += "</style>"
     ret += "</head>"
     ret += "<body>"
-    ret += tree.root.html()
+    ret += tree.root.html()   # 调用SnapTreeNode中的html函数, 其函数内引用了上面两个函数snap_tree_node_html、snap_tree_root_node_html
     ret += "</body>"
     ret += "</html>"
 

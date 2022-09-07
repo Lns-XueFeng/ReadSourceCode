@@ -7,6 +7,11 @@ from .tracer import CodeSnapTracer
 # This is the interface of the package. Almost all user should use this
 # class for the functions
 class CodeSnap(CodeSnapTracer):
+    """
+    CodeSnap继承了CodeSnapTracer类, 实现了run、save方法
+
+    Ctrl+鼠标左键 查看CodeSnapTracer类
+    """
     def __init__(self, tracer="python"):
         super().__init__(tracer=tracer)
 
