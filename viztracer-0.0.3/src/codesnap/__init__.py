@@ -3,7 +3,7 @@
 
 
 """
-__init__.py 的存在使codesnap可以作为一个包从外部调用
+__init__.py 的存在使codesnap可以作为一个包从外部调用.
 例如：在此模块外部的py文件中可 from codesnap import CodeSnap ...
 
 注意：不要直接运行模块内部的文件, 会发生相对路径相关的错误.

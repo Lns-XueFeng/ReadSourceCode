@@ -15,8 +15,8 @@ class SnapTreeNode:
 
     def html(self, parent_entry=None, parent_exit=None):
         """
-        引用htmlconverter.py中snap_tree_node_html、snap_tree_root_node_html函数
-        为每一个节点生成html代码
+        引用htmlconverter.py中snap_tree_node_html、snap_tree_root_node_html函数.
+        为每一个节点生成html代码.
         """
         if parent_entry is None and parent_exit is None:
             # This is root
@@ -29,10 +29,10 @@ class SnapTreeNode:
 
 class SnapTree:
     """
-    实现了一个树结构
-    因为buffer中的数据是call call call ... return return return这样形式的
-    因此在遍历buffer时, 一层一层往下add_entry建立新节点添加其name, time_begin, 在一层层往上add_exit为每一个相对应的节点添加其time_end
-    最终调用generate_html_report传入解析树(SnapTree)生成html代码并一层层传至CodeSnap的save方法
+    实现了一个树结构.
+    因为buffer中的数据是call call call ... return return return这样形式的.
+    因此在遍历buffer时, 一层一层往下add_entry建立新节点添加其name, time_begin, 在一层层往上add_exit为每一个相对应的节点添加其time_end.
+    最终调用generate_html_report传入解析树(SnapTree)生成html代码并一层层传至CodeSnap的save方法.
     """
     def __init__(self):
         # 建立一个根节点

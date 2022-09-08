@@ -8,9 +8,9 @@ from .tracer import CodeSnapTracer
 # class for the functions
 class CodeSnap(CodeSnapTracer):
     """
-    CodeSnap继承了CodeSnapTracer类, 实现了run、save方法
+    CodeSnap继承了CodeSnapTracer类, 实现了run、save方法.
 
-    Ctrl+鼠标左键 查看CodeSnapTracer类
+    Ctrl+鼠标左键 查看CodeSnapTracer类.
     """
     def __init__(self, tracer="python"):
         super().__init__(tracer=tracer)

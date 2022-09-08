@@ -15,7 +15,7 @@ def string_to_color(s):
 
 
 def snap_tree_node_html(node, parent_entry, parent_exit):
-    parent_duration = parent_exit - parent_entry   # 计算出每个call -> return所耗费的时间
+    parent_duration = parent_exit - parent_entry   # 计算出每个call -> return所耗费的时间.
     # 计算出前端展示这个方块的大小
     left = (node.t_entry - parent_entry) / parent_duration
     width = (node.t_exit - node.t_entry) / parent_duration

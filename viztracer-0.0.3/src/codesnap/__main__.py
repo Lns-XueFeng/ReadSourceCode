@@ -3,11 +3,11 @@
 
 
 """
-__main__.py -> 命令行运行 python -m package_name 时会启动这个文件作为程序的入口
+__main__.py -> 命令行运行 python -m package_name 时会启动这个文件作为程序的入口.
 
 浏览顺序：__main__.py -> codesnap.py -> tracer.py -> snaptree.py -> htmlconverter.py
-类的情况：CodeSnap <- CodeSnapTracer - SnapTree - SnapTreeNode <- generate_html_report_from_snap_tree函数
-htmlconverter.py 提供了几个函数来实现html的可视化展示, 并一层一层的传上来, 最终被暴露在CodeSnap的save函数中
+类的情况：CodeSnap <- CodeSnapTracer - SnapTree - SnapTreeNode <- generate_html_report_from_snap_tree函数.
+htmlconverter.py 提供了几个函数来实现html的可视化展示, 并一层一层的传上来, 最终被暴露在CodeSnap的save函数中.
 """
 
 

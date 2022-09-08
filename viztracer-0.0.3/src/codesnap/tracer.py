@@ -54,10 +54,6 @@ class CodeSnapTracer:
         """
         此函数会：call时调用一次, return也调用一次, 拿到相关代码信息
         # sys文档：https://docs.python.org/3/library/sys.html
-        :param frame:
-        :param event:
-        :param arg:
-        :return:
         """
         if event == "call" or event == "return":
             f_locals = frame.f_locals
