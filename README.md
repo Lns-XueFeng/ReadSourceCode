@@ -1,2 +1,2 @@
 # ReadVizTracer
-#### 对gaogaotiantian的VizTracer所有版本进行源码阅读与学习
+#### Because of my Python level is not well, I want to read some Projects which can increase my level, VizTracer is one of the projects
