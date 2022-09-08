@@ -11,7 +11,7 @@ class SnapTreeNode:
         self.t_entry = t_entry
         self.t_exit = t_exit
         self.exited = False
-        self.children = []
+        self.children = []   # 可以使json_object方法的列表解析式向下遍历子节点
 
     def html(self, parent_entry=None, parent_exit=None):
         if parent_entry is None and parent_exit is None:
@@ -23,11 +23,13 @@ class SnapTreeNode:
             return ""
     
     def json_object(self):
+        # 将相关信息存到字典中并返回
         data = {
-            "name": self.function_name,
-            "value": self.t_exit - self.t_entry,
-            "entry": self.t_entry,
-            "exit": self.t_exit,
+            "name": self.function_name,   # 函数名
+            "value": self.t_exit - self.t_entry,   # 持续时间
+            "entry": self.t_entry,   # 开始时间戳
+            "exit": self.t_exit,   # 结束时间戳
+            # 递归遍历所有节点, 生成所有节点的相关数据
             "children": [child.json_object() for child in self.children]
         }
 
@@ -64,4 +66,5 @@ class SnapTree:
         return generate_html_report_from_snap_tree(self)
 
     def get_json(self):
+        # 定位到SnapTreeCode
         return self.root.json_object()

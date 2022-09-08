@@ -102,4 +102,5 @@ class CodeSnapTracer:
         return self.snaptree.generate_html_report()
 
     def generate_json(self):
+        # 定位到SnapTree
         return json.dumps(self.snaptree.get_json())

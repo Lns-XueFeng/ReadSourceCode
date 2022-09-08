@@ -6,6 +6,11 @@ from codesnap import CodeSnapTracer
 from codesnap import CodeSnap
 
 
+"""
+新增了TestCodeSnapOutput测试, 生成一个json文件
+"""
+
+
 class TestTracerBasic(unittest.TestCase):
     def test_construct(self):
         def fib(n):
@@ -45,6 +50,7 @@ class TestCodeSnapOutput(unittest.TestCase):
             if n == 1 or n == 0:
                 return 1
             return fib(n-1) + fib(n-2)
+        # 定位到CodeSnapTracer
         t = CodeSnapTracer()
         t.start()
         fib(10)
