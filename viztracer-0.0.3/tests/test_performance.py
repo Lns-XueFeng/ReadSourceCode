@@ -4,6 +4,7 @@ import time
 import cProfile
 from codesnap import CodeSnap
 
+
 class TestPerformance(unittest.TestCase):
     def do_one_function(self, func):
         # the original speed
@@ -95,7 +96,7 @@ class TestPerformance(unittest.TestCase):
     def test_hanoi(self):
         def hanoi():
             def TowerOfHanoi(n , source, destination, auxiliary): 
-                if n==1: 
+                if n == 1:
                     return
                 TowerOfHanoi(n-1, source, auxiliary, destination) 
                 TowerOfHanoi(n-1, auxiliary, destination, source) 

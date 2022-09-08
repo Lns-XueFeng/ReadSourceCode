@@ -21,6 +21,7 @@ class TestTracer(unittest.TestCase):
         result2 = tracer.generate_report()
         self.assertEqual(result1, result2)
 
+
 class TestCTracer(unittest.TestCase):
     def test_c_load(self):
         def fib(n):
