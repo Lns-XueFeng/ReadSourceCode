@@ -20,6 +20,7 @@ class CodeSnap(CodeSnapTracer):
         if not self.parsed:
             self.parse()
         file_type = output_file.split(".")[-1]
+        # 判断用户选择输出的是html还是json
         if file_type == "html":
             with open(output_file, "w") as f:
                 f.write(self.generate_report())

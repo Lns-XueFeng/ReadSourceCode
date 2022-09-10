@@ -26,6 +26,8 @@ class SnapTreeNode:
         stack = [self]
         ret = []
 
+        # 这一版将代码与数据进行了分离, 主要逻辑分离出数据
+        # 向下遍历, 直到遍历完所有子节点
         while stack:
             node = stack.pop()
             data = {
@@ -42,6 +44,8 @@ class SnapTreeNode:
             }
             ret.append(data)
             if node.children:
+                # 将当前节点的子对象列表反转添加到stack的末尾
+                # 为什么要反转一下呢？-> 应该是后进先出, 后被压入self.children的应该先被遍历, 因此反转一下使后面的在stack中的前面
                 stack.extend(node.children[::-1])
         return ret
 
