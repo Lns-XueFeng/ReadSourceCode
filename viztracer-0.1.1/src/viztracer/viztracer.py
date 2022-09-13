@@ -14,7 +14,7 @@ class VizTracer(_VizTracer):
                 include_files=include_files,
                 exclude_files=exclude_files
         )
-        self.verbose = verbose
+        self.verbose = verbose   # 修改其父类的verbose
 
     def run(self, command, output_file="./result.html"):
         self.start()

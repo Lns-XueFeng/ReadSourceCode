@@ -5,6 +5,11 @@ from .tracer import _VizTracer
 from .viztracer import VizTracer 
 
 
+"""
+0.1.1版本正式改名为VizTracer, 一次较大的改动
+"""
+
+
 __all__ = [
     "_VizTracer",
     "VizTracer"

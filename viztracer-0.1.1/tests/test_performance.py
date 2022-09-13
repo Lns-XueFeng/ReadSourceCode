@@ -6,18 +6,23 @@ from viztracer import VizTracer
 
 
 class Timer:
+    """实现了一个上下文管理器Timer类来计算耗时"""
     def __init__(self):
         self.timer = 0
 
+    # 进入上下文时执行
     def __enter__(self):
         self.timer = time.perf_counter()
         return self
 
+    # 退出上下文时执行
     def __exit__(self, type, value, trace):
         pass
     
     def get_time(self):
+        """计算整个从进入上下文到退出上下文中间执行其他代码的耗时"""
         return time.perf_counter() - self.timer
+
 
 class TestPerformance(unittest.TestCase):
     def do_one_function(self, func):

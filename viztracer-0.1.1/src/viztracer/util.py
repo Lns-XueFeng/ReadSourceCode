@@ -1,3 +1,4 @@
+
 class ProgressBar:
     def __init__(self, pre_string="", post_string=""):
         # print pre_string <bar> post_string
