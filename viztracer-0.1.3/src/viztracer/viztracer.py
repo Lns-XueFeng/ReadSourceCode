@@ -8,10 +8,10 @@ from .tracer import _VizTracer
 # class for the functions
 class VizTracer(_VizTracer):
     def __init__(self, 
-            tracer="c", 
-            verbose=1, 
-            max_stack_depth=-1, 
-            include_files=None, 
+            tracer="c",
+            verbose=1,
+            max_stack_depth=-1,
+            include_files=None,
             exclude_files=None,
             output_file="result.html"):
         super().__init__(
@@ -21,8 +21,9 @@ class VizTracer(_VizTracer):
                 exclude_files=exclude_files
         )
         self.verbose = verbose
-        self.output_file=output_file
-    
+        self.output_file = output_file
+
+    # 支持了上下文管理器来启动VizTracer
     def __enter__(self):
         self.start()
         return self

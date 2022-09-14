@@ -31,6 +31,7 @@ class TestCommandLineBasic(unittest.TestCase):
         self.cleanup(output_file=expected_output_file)
         return result
 
+    # 测试不同命令的执行情况
     def test_no_file(self):
         result = self.template(["python", "-m", "viztracer"], expected_output_file=None)
         self.assertIn("help", result.stdout.decode("utf8"))
