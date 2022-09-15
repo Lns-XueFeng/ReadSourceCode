@@ -16,8 +16,10 @@ if __name__ == '__main__':
     parser.add_argument("--exclude_files", nargs="*", default=None)
     parser.add_argument("--include_files", nargs="*", default=None)
     parser.add_argument("--ignore_c_function", action="store_true", default=False)
+    # 新增可选参数
     parser.add_argument("--save_flamegraph", action="store_true", default=False)
     parser.add_argument("--generate_flamegraph", nargs="?", default=None)
+
     parser.add_argument("--run", nargs="*", default=[])
     parser.add_argument("command", nargs=argparse.REMAINDER)
     options = parser.parse_args(sys.argv[1:])
@@ -28,6 +30,7 @@ if __name__ == '__main__':
         command = options.run
     elif options.generate_flamegraph:
         flamegraph = FlameGraph()
+        # options.generate_flamegraph -> my_script.py
         flamegraph.load(options.generate_flamegraph)
         if options.output_file:
             ofile = options.output_file

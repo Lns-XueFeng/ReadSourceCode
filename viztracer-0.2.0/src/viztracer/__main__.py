@@ -13,7 +13,7 @@ if __name__ == '__main__':
     parser.add_argument("--max_stack_depth", nargs="?", type=int, default=-1)
     parser.add_argument("--exclude_files", nargs="*", default=None)
     parser.add_argument("--include_files", nargs="*", default=None)
-    parser.add_argument("--ignore_c_function", action="store_true", default=False)
+    parser.add_argument("--ignore_c_function", action="store_true", default=False)   # 新可选参数
     parser.add_argument("--run", nargs="*", default=[])
     parser.add_argument("command", nargs=argparse.REMAINDER)
     options = parser.parse_args(sys.argv[1:])
