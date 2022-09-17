@@ -16,7 +16,7 @@ if __name__ == '__main__':
     parser.add_argument("--exclude_files", nargs="*", default=None)
     parser.add_argument("--include_files", nargs="*", default=None)
     parser.add_argument("--ignore_c_function", action="store_true", default=False)
-    # 新增可选参数
+    # 新增可选参数 - 保存为火焰图
     parser.add_argument("--save_flamegraph", action="store_true", default=False)
     parser.add_argument("--generate_flamegraph", nargs="?", default=None)
 
@@ -64,4 +64,5 @@ if __name__ == '__main__':
     tracer.start()
     exec(code_string)
     tracer.stop()
+    # save_flamegraph=options.save_flamegraph
     tracer.save(output_file=options.output_file, save_flamegraph=options.save_flamegraph)

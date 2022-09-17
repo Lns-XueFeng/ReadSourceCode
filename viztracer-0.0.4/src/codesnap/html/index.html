@@ -1,8 +1,14 @@
 <html>
 <head>
   <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
-  <script>$d3flamegraph_js</script>
-  <style>$d3flamegraph_css</style>
+  <script>
+    <!--  模板字符串  -->
+    $d3flamegraph_js
+  </script>
+  <style>
+    <!--  模板字符串  -->
+    $d3flamegraph_css
+  </style>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
@@ -35,6 +41,7 @@
       .setColorMapper((d, originalColor) =>
         d.highlight ? "#6aff8f" : originalColor);
 
+    <!--  模板字符串  -->
     const data = $json_data
 
     d3.select("#chart")

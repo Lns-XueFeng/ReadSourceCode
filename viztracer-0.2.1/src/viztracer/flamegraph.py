@@ -7,6 +7,9 @@ from string import Template
 
 
 class _FlameNode:
+    """
+    生成节点
+    """
     def __init__(self, parent, name):
         self.name = name
         self.value = 0
@@ -23,6 +26,9 @@ class _FlameNode:
 
 
 class _FlameTree:
+    """
+    生成树
+    """
     def __init__(self):
         self.root = _FlameNode(None, "__root__")
         self.curr = self.root
@@ -48,12 +54,17 @@ class _FlameTree:
     def json(self):
         return self.root.json()
 
+
 class FlameGraph:
+
     def __init__(self, trace_data=None):
         if trace_data:
             self._data = self.parse(trace_data)
     
     def parse(self, trace_data):
+        """
+        解析trace_data, 将数据解析为树结构
+        """
         trees = {}
         ret = {}
         for data in trace_data:
@@ -77,9 +88,12 @@ class FlameGraph:
     
     def save(self, output_file="result_flamegraph.html"):
         sub = {}
+        # 读取html/flamegraph.html
         with open(os.path.join(os.path.dirname(__file__), "html/flamegraph.html")) as f:
             tmpl = f.read()
         sub["data"] = self._data
 
         with open(output_file, "w") as f:
+            # Template(tmpl).substitute(sub) 将sub加入到tmpl的模板中去($data变量承接)
+            # 由此生成html代码字符串并写入html文件
             f.write(Template(tmpl).substitute(sub))

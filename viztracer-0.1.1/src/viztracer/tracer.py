@@ -208,6 +208,10 @@ class _VizTracer:
         return total_entries
 
     def generate_report(self):
+        """
+        从这个版本起, 应该是引入了前端chrome的框架,
+        无需在自己创建节点树, 自己生成html代码
+        """
         sub = {}
         with open(os.path.join(os.path.dirname(__file__), "html/trace_viewer_embedder.html")) as f:
             tmpl = f.read()

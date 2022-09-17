@@ -55,8 +55,10 @@ class VizTracer(_VizTracer):
                 f.write(self.generate_json())
         else:
             raise Exception("Only html and json are supported")
-        
+
+        # 如果设置了可选参数--save_flamegraph
         if save_flamegraph:
+            # 生成火焰图
             self.save_flamegraph(".".join(output_file.split(".")[:-1]) + "_flamegraph.html")
     
     def save_flamegraph(self, output_file=None):
