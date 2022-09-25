@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4db7fb23-6b2e-4240-bbd3-5245bbba0f32" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/howdoi/howdoi/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/howdoi/howdoi/__main__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/howdoi/howdoi/errors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/howdoi/howdoi/howdoi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/howdoi/test_howdoi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viztracer-0.0.4/src/codesnap/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/viztracer-0.0.4/src/codesnap/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viztracer-0.0.4/src/codesnap/htmlconverter.py" beforeDir="false" afterPath="$PROJECT_DIR$/viztracer-0.0.4/src/codesnap/htmlconverter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viztracer-0.1.1/src/viztracer/tracer.py" beforeDir="false" afterPath="$PROJECT_DIR$/viztracer-0.1.1/src/viztracer/tracer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viztracer-0.2.1/src/viztracer/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/viztracer-0.2.1/src/viztracer/__main__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viztracer-0.2.1/src/viztracer/flamegraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/viztracer-0.2.1/src/viztracer/flamegraph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viztracer-0.2.1/src/viztracer/html/flamegraph.html" beforeDir="false" afterPath="$PROJECT_DIR$/viztracer-0.2.1/src/viztracer/html/flamegraph.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viztracer-0.2.1/src/viztracer/viztracer.py" beforeDir="false" afterPath="$PROJECT_DIR$/viztracer-0.2.1/src/viztracer/viztracer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viztracer-0.2.2/src/viztracer/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/viztracer-0.2.2/src/viztracer/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +202,14 @@
       <workItem from="1663161272377" duration="706000" />
       <workItem from="1663168691916" duration="60000" />
       <workItem from="1663211520413" duration="438000" />
-      <workItem from="1663404664296" duration="2839000" />
+      <workItem from="1663404664296" duration="3401000" />
+      <workItem from="1663421104012" duration="2796000" />
+      <workItem from="1663459803981" duration="62000" />
+      <workItem from="1663594859645" duration="1242000" />
+      <workItem from="1663749926839" duration="3736000" />
+      <workItem from="1663848409868" duration="72000" />
+      <workItem from="1664073439750" duration="11000" />
+      <workItem from="1664074024415" duration="1326000" />
     </task>
     <task id="LOCAL-00001" summary="...">
       <created>1662472033013</created>
@@ -290,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663211893644</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update">
+      <created>1663407710221</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1663407710221</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +330,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ReadVizTracer$.coverage" NAME=" Coverage Results" MODIFIED="1662645122038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ReadVizTracer$test.coverage" NAME="test Coverage Results" MODIFIED="1662946414403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/ReadVizTracer$test.coverage" NAME="test Coverage Results" MODIFIED="1663423743780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/ReadVizTracer$__main__.coverage" NAME="__main__ Coverage Results" MODIFIED="1662529903528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/viztracer-0.0.3/src/codesnap" />
   </component>
 </project>
