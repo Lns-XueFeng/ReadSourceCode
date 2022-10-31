@@ -9,6 +9,7 @@ from .pycompat import ABC, string_types
 MAX_VARIABLE_LENGTH = 100
 MAX_EXCEPTION_LENGTH = 200
 
+
 def _check_methods(C, *methods):
     mro = C.__mro__
     for method in methods:
@@ -34,13 +35,11 @@ class WritableStream(ABC):
         return NotImplemented
 
 
-
 file_reading_errors = (
     IOError,
     OSError,
     ValueError # IronPython weirdness.
 )
-
 
 
 def shitcode(s):
