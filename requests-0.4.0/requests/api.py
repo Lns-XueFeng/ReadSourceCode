@@ -18,7 +18,6 @@ from .models import Request, Response, AuthManager, AuthObject, auth_manager
 __all__ = ('request', 'get', 'head', 'post', 'put', 'delete')
 
 
-
 def request(method, url, **kwargs):
     """Sends a `method` request. Returns :class:`Response` object.
 

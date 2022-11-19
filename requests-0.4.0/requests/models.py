@@ -21,7 +21,6 @@ from .packages.poster.encode import multipart_encode
 from .packages.poster.streaminghttp import register_openers, get_handlers
 
 
-
 class Request(object):
     """The :class:`Request` object. It carries out all functionality of
     Requests. Recommended interface is with the Requests functions.
